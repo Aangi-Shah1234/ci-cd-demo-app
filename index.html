@@ -26,7 +26,7 @@
             backdrop-filter: blur(10px);
             border-radius: 24px;
             padding: 45px 35px;
-            max-width: 520px;
+            max-width: 540px;
             width: 100%;
             text-align: center;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -79,31 +79,32 @@
         }
 
         p.desc {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #4b5563;
             line-height: 1.6;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
         .pipeline-tags {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
-            padding-top: 15px;
+            gap: 8px;
+            padding-top: 18px;
             border-top: 1px solid #e5e7eb;
         }
 
         .tag {
-            padding: 7px 15px;
+            padding: 7px 13px;
             border-radius: 12px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
         }
 
-        .tag-source { background: #e0f2fe; color: #0284c7; }
-        .tag-build { background: #fef3c7; color: #d97706; }
-        .tag-deploy { background: #ede9fe; color: #7c3aed; }
+        .tag-ec2 { background: #fee2e2; color: #b91c1c; }
+        .tag-apache { background: #fef3c7; color: #b45309; }
+        .tag-s3 { background: #e0f2fe; color: #0369a1; }
+        .tag-actions { background: #ede9fe; color: #6d28d9; }
     </style>
 </head>
 <body>
@@ -112,12 +113,13 @@
             <span class="pulse-dot"></span>
             Live Deployment
         </div>
-        <h1>Deployed via AWS CodePipeline!</h1>
-        <p class="desc">This page was automatically built and deployed through the automated CI/CD pipeline.</p>
+        <h1>Deployed via CI/CD on AWS!</h1>
+        <p class="desc">This page was automatically deployed to an Amazon EC2 web server using an automated GitHub Actions CI/CD workflow.</p>
         <div class="pipeline-tags">
-            <span class="tag tag-source">📦 GitHub / S3</span>
-            <span class="tag tag-build">⚡ CodeBuild</span>
-            <span class="tag tag-deploy">🚀 CodeDeploy</span>
+            <span class="tag tag-ec2">🖥️ Amazon EC2</span>
+            <span class="tag tag-apache">🌐 Apache (httpd)</span>
+            <span class="tag tag-s3">🪣 S3 Bucket</span>
+            <span class="tag tag-actions">⚡ GitHub Actions</span>
         </div>
     </div>
 </body>
